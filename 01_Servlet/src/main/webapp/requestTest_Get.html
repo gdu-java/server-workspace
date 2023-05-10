@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Get방식으로 요청 후 응답페이지 받아보기</h1>
+
+    <p>
+        특징1. GET방식으로 요청시 URL의 Header영역에 데이터들을 파라미터로 포함시켜 요청함. <br>
+        => 사용자가 입력한 값(데이터)들이 URL에 노출됨. <br>
+        => 보안유지가 어려움. <br>
+        => 즉, 로그인이나 회원가입 같은 경우 GET방식은 부적합함. <br><br>
+
+        특징2. Header영역은 전송하는 길이에 제한이 있음. <br>
+        => 방대한 데이터를 담았을 경우 초과된 데이터는 절단되어 전달됨. <br>
+        => 즉, 게시판 등의 내용을 작성할 경우 GET방식은 부적합함. <br><br>
+
+        특징3. 장점은 URL에 데이터가 노출되기 때문에 즐겨찾기(북마크, URL을 저장해놨다가 재요청)에 유용. 
+        => 즉, 검색 기능 같은 경우 GET방식이 적합함. 
+    </p>
+
+    <h2>개인정보 입력</h2>
+
+    <form action="/01_Servlet/get.do" method="post">
+        <ul>
+            <li>
+                이름 : <input type="text" name="name">
+            </li>
+            <li>
+                성별 : <input type="radio" name="gender" value="m">남자
+                       <input type="radio" name="gender" value="f">여자
+            </li>
+            <li>
+                나이 : <input type="text" name="age">
+            </li>
+            <li>
+                거주지 : <select name="city">
+                            <option>서울</option>
+                            <option>경기도</option>
+                            <option>충청도</option>
+                            <option>강원도</option>
+                            <option>부산</option>
+                        </select>
+            </li>
+            <li>
+                키 : <input type="range" name="height" min="130" max="200">
+            </li>
+            <li>
+                좋아하는 음식(모두 고르시오.)
+                <input type="checkbox" name="food" value="한식">한식
+                <input type="checkbox" name="food" value="중식">중식
+                <input type="checkbox" name="food" value="일식">일식
+                <input type="checkbox" name="food" value="양식">양식
+                <input type="checkbox" name="food" value="분식">분식
+            </li>
+            <input type="submit" value="전송">
+            <input type="reset" value="다시입력">
+        </ul>
+    </form>
+</body>
+</html>

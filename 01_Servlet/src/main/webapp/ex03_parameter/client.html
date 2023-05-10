@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="/01_Servlet/ArrayServlet" method="get">
+	
+		<div>
+			<input type="text" name="tel" size="4" maxlength="3">
+			-
+			<input type="text" name="tel" size="4" maxlength="4">
+			-
+			<input type="text" name="tel" size="4" maxlength="4">
+		</div>
+		<div>
+			<input type="checkbox" name="hobbies" value="여행" id="travel">
+			<label for="travel">여행</label>
+			<input type="checkbox" name="hobbies" value="수영" id="swim">
+			<label for="swim">수영</label>
+			<input type="checkbox" name="hobbies" value="축구" id="soccer">
+			<label for="soccer">축구</label>
+		</div>
+		<button>배열전송</button>
+	</form>
+	
+	<form action="/01_Servlet/GetServlet">
+		<label for="model">모델명</label>
+		<input type="text" id="model" name="model" placeholder="모델명">
+		<label for="price">가격</label>
+		<input type="text" id="price" name="price" placeholder="가격(원)">
+		<input type="submit" value="파라미터 전송(GET)">
+	</form>
+	<br><br>
+	<form action="/01_Servlet/PostServlet" method="post">
+		<label for="model">모델명</label>
+		<input type="text" id="model" name="model" placeholder="모델명">
+		<label for="price">가격</label>
+		<input type="text" id="price" name="price" placeholder="가격(원)">
+		<input type="submit" value="파라미터 전송(POST)">
+	</form>	
+
+</body>
+</html>
